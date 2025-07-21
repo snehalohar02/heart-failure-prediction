@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heart Failure Prediction</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Heart Failure Prediction</h1>
+        <form method="POST">
+            <label>Age:</label>
+            <input type="number" name="age" required>
+
+            <label>Anaemia (0/1):</label>
+            <input type="number" name="anaemia" required>
+
+            <label>Creatinine Phosphokinase:</label>
+            <input type="number" name="creatinine_phosphokinase" required>
+
+            <label>Diabetes (0/1):</label>
+            <input type="number" name="diabetes" required>
+
+            <label>Ejection Fraction:</label>
+            <input type="number" name="ejection_fraction" required>
+
+            <label>High Blood Pressure (0/1):</label>
+            <input type="number" name="high_blood_pressure" required>
+
+            <label>Platelets:</label>
+            <input type="number" name="platelets" required>
+
+            <label>Serum Creatinine:</label>
+            <input type="number" name="serum_creatinine" required>
+
+            <label>Serum Sodium:</label>
+            <input type="number" name="serum_sodium" required>
+
+            <label>Sex (0 = Female, 1 = Male):</label>
+            <input type="number" name="sex" required>
+
+            <label>Smoking (0/1):</label>
+            <input type="number" name="smoking" required>
+
+            <label>Time:</label>
+            <input type="number" name="time" required>
+
+            <button type="submit">Predict</button>
+        </form>
+
+        {% if prediction %}
+            <h2 class="result">{{ prediction }}</h2>
+        {% endif %}
+    </div>
+</body>
+</html>
